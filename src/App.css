@@ -283,20 +283,19 @@
 
 .hero-visual {
   display: grid;
-  min-height: 580px;
+  min-height: 500px;
   place-items: center;
 }
 
 .portrait-orbit {
   position: absolute;
-  top: 6%;
+  top: 50%;
   left: 50%;
-  width: 112%;
-  max-width: 470px;
+  width: min(100%, 360px);
   aspect-ratio: 1;
   border: 1px solid rgba(47, 130, 173, 0.18);
   border-radius: 50%;
-  transform: translateX(-50%);
+  transform: translate(-50%, -52%);
 }
 
 .portrait-orbit::before,
@@ -324,23 +323,24 @@
 
 .portrait-card {
   position: relative;
-  width: min(88%, 388px);
+  width: min(76%, 300px);
   margin: 0;
-  padding: 10px;
+  padding: 8px;
   border: 1px solid rgba(255, 255, 255, 0.82);
-  border-radius: 190px 190px 30px 30px;
+  border-radius: 34px;
   background: rgba(255, 255, 255, 0.66);
   box-shadow: var(--shadow);
-  transform: rotate(1.6deg);
+  transform: rotate(0.8deg);
   backdrop-filter: blur(12px);
 }
 
 .portrait-card img {
   width: 100%;
+  height: auto;
   aspect-ratio: 3 / 4;
-  border-radius: 180px 180px 22px 22px;
+  border-radius: 27px;
   object-fit: cover;
-  object-position: center 22%;
+  object-position: center;
 }
 
 .portrait-card figcaption {
@@ -348,7 +348,7 @@
   align-items: center;
   justify-content: space-between;
   gap: 10px;
-  padding: 13px 6px 4px;
+  padding: 11px 6px 3px;
   color: var(--muted);
   font-size: 0.66rem;
   letter-spacing: 0.08em;
@@ -367,8 +367,8 @@
 
 .portrait-note {
   position: absolute;
-  right: -6px;
-  bottom: 66px;
+  right: calc(50% - 184px);
+  bottom: 72px;
   display: flex;
   flex-direction: column;
   gap: 8px;
@@ -892,7 +892,7 @@
   }
 
   .hero-visual {
-    min-height: 510px;
+    min-height: 430px;
   }
 
   .portrait-note {
@@ -993,15 +993,15 @@
   }
 
   .hero-visual {
-    min-height: 500px;
+    min-height: 410px;
   }
 
   .portrait-card {
-    width: min(82%, 350px);
+    width: min(72%, 280px);
   }
 
   .portrait-orbit {
-    width: min(112%, 440px);
+    width: min(100%, 340px);
   }
 
   .scroll-cue {
@@ -1119,11 +1119,11 @@
   }
 
   .hero-visual {
-    min-height: 430px;
+    min-height: 360px;
   }
 
   .portrait-card {
-    width: min(82%, 294px);
+    width: min(68%, 240px);
   }
 
   .portrait-card figcaption {
