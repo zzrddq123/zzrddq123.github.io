@@ -286,7 +286,7 @@
 
 .portrait-card {
   position: relative;
-  width: min(76%, 300px);
+  width: min(72%, 280px);
   margin: 0;
   padding: 8px;
   border: 1px solid rgba(255, 255, 255, 0.82);
@@ -935,7 +935,7 @@
   }
 
   .portrait-card {
-    width: min(72%, 280px);
+    width: min(68%, 260px);
   }
 
   .portrait-orbit {
@@ -1051,7 +1051,7 @@
   }
 
   .portrait-card {
-    width: min(68%, 240px);
+    width: min(62%, 220px);
   }
 
   .portrait-card figcaption {
