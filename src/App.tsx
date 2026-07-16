@@ -2,15 +2,18 @@ import { useEffect } from 'react';
 import { ArrowDownRight, ArrowUpRight, Mail, MapPin } from 'lucide-react';
 import './App.css';
 
-const RESEARCH_ITEMS = [
+type ResearchItem = {
+  period?: string;
+  type?: string;
+  title: string;
+  organization?: string;
+  description?: string;
+  current?: boolean;
+};
+
+const RESEARCH_ITEMS: ResearchItem[] = [
   {
-    period: '2025.05 — 至今',
-    type: '科研实习',
-    title: '清源研究院王德泉课题组科研实习',
-    organization: '蛋白质功能预测',
-    description:
-      '围绕 ProteinGym，融合序列、MSA 与结构信息，优化蛋白语言模型的推理与突变效应预测。',
-    current: true,
+    title: '毕业设计：灵长类基因组未命名基因的结构与功能预测',
   },
   {
     period: '2024.05 — 2025.05',
@@ -225,23 +228,33 @@ function App() {
             </div>
 
             <ol className="research-list">
-              {RESEARCH_ITEMS.map((item, index) => (
-                <li className="research-item" data-reveal key={item.title}>
-                  <div className="research-index" aria-hidden="true">0{index + 1}</div>
-                  <div className="research-time">
-                    <time>{item.period}</time>
-                    <span>{item.type}</span>
-                  </div>
-                  <div className="research-body">
-                    <div className="research-title-row">
-                      <h3>{item.title}</h3>
-                      {item.current && <span className="status-pill">进行中</span>}
+              {RESEARCH_ITEMS.map((item, index) => {
+                const hasMeta = Boolean(item.period || item.type);
+
+                return (
+                  <li
+                    className={`research-item${hasMeta ? '' : ' research-item-compact'}`}
+                    data-reveal
+                    key={item.title}
+                  >
+                    <div className="research-index" aria-hidden="true">0{index + 1}</div>
+                    {hasMeta && (
+                      <div className="research-time">
+                        {item.period && <time>{item.period}</time>}
+                        {item.type && <span>{item.type}</span>}
+                      </div>
+                    )}
+                    <div className="research-body">
+                      <div className="research-title-row">
+                        <h3>{item.title}</h3>
+                        {item.current && <span className="status-pill">进行中</span>}
+                      </div>
+                      {item.organization && <p className="research-org">{item.organization}</p>}
+                      {item.description && <p>{item.description}</p>}
                     </div>
-                    <p className="research-org">{item.organization}</p>
-                    <p>{item.description}</p>
-                  </div>
-                </li>
-              ))}
+                  </li>
+                );
+              })}
             </ol>
           </div>
         </section>

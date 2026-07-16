@@ -525,6 +525,10 @@
   border-top: 1px solid var(--line);
 }
 
+.research-item-compact {
+  grid-template-columns: 48px 1fr;
+}
+
 .research-item:last-child {
   border-bottom: 1px solid var(--line);
 }
@@ -848,6 +852,10 @@
     gap: 18px;
   }
 
+  .research-item-compact {
+    grid-template-columns: 38px 1fr;
+  }
+
   .hobby-copy {
     padding: 24px;
   }
@@ -976,6 +984,10 @@
 
   .research-index {
     grid-row: 1 / span 2;
+  }
+
+  .research-item-compact .research-index {
+    grid-row: 1;
   }
 
   .research-time,
