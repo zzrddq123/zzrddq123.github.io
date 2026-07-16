@@ -30,7 +30,8 @@ const RESEARCH_ITEMS: ResearchItem[] = [
   },
   {
     period: '2025.09 — 2026.06',
-    title: '毕业设计：灵长类基因组未命名基因的结构与功能预测',
+    type: '毕业设计',
+    title: '灵长类基因组未命名基因的结构与功能预测',
   },
 ];
 
@@ -262,12 +263,11 @@ function App() {
         </section>
 
         <section className="content-section section-container" id="awards" aria-labelledby="awards-title">
-          <div className="section-heading section-heading-row" data-reveal>
+          <div className="section-heading" data-reveal>
             <div>
               <p className="section-kicker">03 / HIGHLIGHTS</p>
               <h2 id="awards-title">所获奖项</h2>
             </div>
-            <p className="section-summary">程序设计、建模与围棋，让不同类型的训练彼此补充。</p>
           </div>
 
           <div className="awards-grid">
@@ -317,7 +317,7 @@ function App() {
           <div className="contact-card" data-reveal>
             <div>
               <p className="section-kicker section-kicker-light">05 / CONTACT</p>
-              <h2 id="contact-title">欢迎交流。</h2>
+              <h2 id="contact-title">欢迎交流~</h2>
             </div>
             <div className="contact-links">
               <a href="mailto:sjtu19979148823@sjtu.edu.cn">
