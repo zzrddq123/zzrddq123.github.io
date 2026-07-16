@@ -1,0 +1,44 @@
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+node_modules
+dist
+dist-ssr
+*.local
+
+# Editor directories and files
+.vscode/*
+!.vscode/extensions.json
+.idea
+.DS_Store
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+# Local workspace metadata
+AGENTS.md
+.agent_context/
+.multica/
+description.md
+info.md
+
+# Superseded generator scaffold kept only in the local workspace
+components.json
+postcss.config.js
+tailwind.config.js
+src/components/
+src/hooks/
+src/lib/
+src/pages/
+src/sections/
+public/images/hero-*.jpg
+public/images/hobby-music.jpg
+public/images/portrait.png
