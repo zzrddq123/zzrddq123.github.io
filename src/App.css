@@ -182,26 +182,14 @@
 }
 
 .hero h1 {
+  max-width: 700px;
   margin: 0;
   color: var(--ink);
   font-family: 'Noto Serif SC', 'Songti SC', serif;
-  font-size: clamp(3.6rem, 7.2vw, 6.6rem);
+  font-size: clamp(1.45rem, 2.45vw, 2.05rem);
   font-weight: 500;
-  letter-spacing: -0.065em;
-  line-height: 1.04;
-}
-
-.hero h1 em {
-  color: var(--blue-deep);
-  font-style: normal;
-}
-
-.hero-intro {
-  max-width: 590px;
-  margin: 30px 0 0;
-  color: var(--ink-soft);
-  font-size: clamp(1rem, 1.35vw, 1.14rem);
-  line-height: 1.9;
+  letter-spacing: -0.025em;
+  line-height: 1.85;
 }
 
 .hero-actions {
@@ -333,20 +321,6 @@
   font-weight: 600;
 }
 
-.portrait-note {
-  position: absolute;
-  right: calc(50% - 184px);
-  bottom: 72px;
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
-  color: var(--blue-deep);
-  font-size: 0.62rem;
-  font-weight: 600;
-  letter-spacing: 0.18em;
-  writing-mode: vertical-rl;
-}
-
 .scroll-cue {
   position: absolute;
   bottom: 24px;
@@ -373,6 +347,10 @@
 
 .section-heading {
   margin-bottom: 54px;
+}
+
+.section-heading-compact {
+  margin-bottom: 30px;
 }
 
 .section-heading h2 {
@@ -402,7 +380,7 @@
 
 .profile-grid {
   display: grid;
-  grid-template-columns: minmax(0, 1.4fr) minmax(280px, 0.74fr);
+  grid-template-columns: minmax(260px, 0.78fr) minmax(420px, 1.22fr);
   gap: 22px;
 }
 
@@ -415,26 +393,27 @@
 }
 
 .profile-card {
+  display: grid;
+  align-content: center;
   padding: clamp(30px, 5vw, 56px);
   border-radius: 30px;
   background: rgba(255, 255, 255, 0.62);
   backdrop-filter: blur(14px);
 }
 
-.profile-lead {
-  max-width: 710px;
+.profile-title {
   margin: 0;
-  color: var(--ink-soft);
+  color: var(--ink);
   font-family: 'Noto Serif SC', 'Songti SC', serif;
-  font-size: clamp(1.2rem, 2vw, 1.55rem);
-  line-height: 1.85;
+  font-size: clamp(1.35rem, 2vw, 1.75rem);
+  font-weight: 500;
 }
 
 .skill-list {
   display: flex;
   flex-wrap: wrap;
   gap: 9px;
-  margin-top: 36px;
+  margin-top: 24px;
 }
 
 .skill-list span {
@@ -472,11 +451,45 @@
   color: #9fd5ee;
 }
 
-.education-period {
-  margin: 48px 0 8px;
+.education-list {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 26px;
+  margin-top: 38px;
+}
+
+.education-entry {
+  min-width: 0;
+}
+
+.education-entry + .education-entry {
+  padding-left: 26px;
+  border-left: 1px solid rgba(255, 255, 255, 0.14);
+}
+
+.education-meta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 10px;
   color: #9fd5ee;
+}
+
+.education-meta time {
   font-size: 0.76rem;
-  letter-spacing: 0.08em;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+}
+
+.education-meta span {
+  padding: 3px 8px;
+  border-radius: 999px;
+  color: rgba(255, 255, 255, 0.88);
+  background: rgba(255, 255, 255, 0.1);
+  font-size: 0.68rem;
 }
 
 .education-card h3 {
@@ -487,22 +500,10 @@
   font-weight: 500;
 }
 
-.education-card > p:not(.card-label):not(.education-period) {
+.education-entry > p {
   margin: 0;
   font-size: 0.88rem;
-}
-
-.education-detail {
-  position: relative;
-  z-index: 1;
-  display: flex;
-  flex-direction: column;
-  gap: 5px;
-  margin-top: 42px;
-  padding-top: 20px;
-  border-top: 1px solid rgba(255, 255, 255, 0.14);
   color: rgba(255, 255, 255, 0.82);
-  font-size: 0.82rem;
 }
 
 .research-section {
@@ -839,12 +840,8 @@
     min-height: 430px;
   }
 
-  .portrait-note {
-    display: none;
-  }
-
   .profile-grid {
-    grid-template-columns: 1.12fr 0.88fr;
+    grid-template-columns: 1fr;
   }
 
   .research-item {
@@ -921,11 +918,8 @@
   }
 
   .hero h1 {
-    font-size: clamp(3.2rem, 15vw, 5rem);
-  }
-
-  .hero-intro {
-    margin-top: 24px;
+    font-size: clamp(1.4rem, 4.5vw, 1.8rem);
+    line-height: 1.8;
   }
 
   .hero-visual {
@@ -970,10 +964,6 @@
   .profile-card,
   .education-card {
     border-radius: 24px;
-  }
-
-  .education-period {
-    margin-top: 38px;
   }
 
   .research-item {
@@ -1033,12 +1023,8 @@
   }
 
   .hero h1 {
-    font-size: clamp(3rem, 16vw, 4rem);
-  }
-
-  .hero-intro {
-    font-size: 0.96rem;
-    line-height: 1.82;
+    font-size: 1.3rem;
+    line-height: 1.85;
   }
 
   .hero-actions {
@@ -1072,8 +1058,15 @@
     padding: 26px;
   }
 
-  .profile-lead {
-    font-size: 1.12rem;
+  .education-list {
+    grid-template-columns: 1fr;
+  }
+
+  .education-entry + .education-entry {
+    padding-top: 22px;
+    padding-left: 0;
+    border-top: 1px solid rgba(255, 255, 255, 0.14);
+    border-left: 0;
   }
 
   .research-title-row {
