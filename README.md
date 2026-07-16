@@ -2,6 +2,8 @@
 
 一个聚焦生物信息学、蛋白质功能预测与个人经历的响应式主页。
 
+主页地址：https://zzrddq123.github.io/
+
 ## 本地运行
 
 ```bash
@@ -18,4 +20,6 @@ npm run dev
 
 ## 技术栈
 
-React 19、TypeScript、Vite 与原生 CSS。页面支持响应式布局、键盘导航、减少动态效果偏好，并使用相对资源路径兼容 GitHub Pages。
+React 19、TypeScript、Vite 与原生 CSS。页面支持响应式布局、键盘导航、减少动态效果偏好，并兼容 GitHub Pages。
+
+`main` 分支更新后，GitHub Actions 会构建站点并自动发布到 GitHub Pages。
