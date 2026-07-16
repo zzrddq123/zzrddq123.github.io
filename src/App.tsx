@@ -6,8 +6,8 @@ const RESEARCH_ITEMS = [
   {
     period: '2025.05 — 至今',
     type: '科研实习',
-    title: '蛋白质功能预测',
-    organization: '清源研究院 · 王德泉课题组',
+    title: '清源研究院王德泉课题组科研实习',
+    organization: '蛋白质功能预测',
     description:
       '围绕 ProteinGym，融合序列、MSA 与结构信息，优化蛋白语言模型的推理与突变效应预测。',
     current: true,
@@ -15,15 +15,23 @@ const RESEARCH_ITEMS = [
   {
     period: '2024.05 — 2025.05',
     type: '强基科创 · 负责人',
-    title: '多组学计算流程与肺癌应用',
+    title: '基于人工智能的蛋白翻译组学计算流程搭建及肺癌中的应用',
     organization: '上海交通大学',
     description:
       '搭建并整合蛋白组学、翻译组学分析管线，用于发现肺癌相关肽段，项目已结项。',
   },
   {
+    period: '2024.09 — 2025.03',
+    type: 'PRP #46',
+    title: '基于人工智能的游戏设计',
+    organization: '上海交通大学',
+    description:
+      '借助 AI 工具完成游戏布局、画面与背景音乐设计，并使用大语言模型辅助开发轻量化 HTML 网页游戏。',
+  },
+  {
     period: '2023.09 — 2024.09',
     type: 'PRP #44',
-    title: '植物逆境机制的组学分析',
+    title: '基于人工智能和组学数据库的植物逆境机制研究',
     organization: '上海交通大学',
     description:
       '完成组学数据筛选、质控与肽段预测，分析拟南芥在逆境环境中的基因表达。',
@@ -57,14 +65,14 @@ const HOBBIES = [
   {
     image: 'hobby-go.jpg',
     title: '围棋',
-    label: 'Amateur 6 Dan',
-    description: '在棋盘上练习判断，也练习耐心。',
   },
   {
     image: 'hobby-badminton.jpg',
     title: '羽毛球',
-    label: 'Keep Moving',
-    description: '用一场球切换节奏，保持专注与活力。',
+  },
+  {
+    image: 'hobby-music.jpg',
+    title: '音乐',
   },
 ];
 
@@ -133,7 +141,7 @@ function App() {
               <em>理解生命。</em>
             </h1>
             <p className="hero-intro">
-              曾子瑞，上海交通大学生物科学（强基计划）本科生，关注蛋白质功能预测、生物信息学与 AI for Science。
+              曾子瑞，上海交通大学生物科学本科生，专注生物信息学与 AI for Science。
             </p>
 
             <div className="hero-actions">
@@ -144,20 +152,6 @@ function App() {
               <a className="button button-quiet" href="#contact">联系我</a>
             </div>
 
-            <dl className="hero-metrics" aria-label="学业概览">
-              <div>
-                <dt>6 / 32</dt>
-                <dd>专业排名</dd>
-              </div>
-              <div>
-                <dt>3.67</dt>
-                <dd>GPA</dd>
-              </div>
-              <div>
-                <dt>582</dt>
-                <dd>CET-6</dd>
-              </div>
-            </dl>
           </div>
 
           <div className="hero-visual" data-reveal>
@@ -294,11 +288,9 @@ function App() {
                       height="2304"
                       loading="lazy"
                     />
-                    <span>{hobby.label}</span>
                   </div>
                   <div className="hobby-copy">
                     <h3>{hobby.title}</h3>
-                    <p>{hobby.description}</p>
                   </div>
                 </article>
               ))}
