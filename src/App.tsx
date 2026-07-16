@@ -13,31 +13,24 @@ type ResearchItem = {
 
 const RESEARCH_ITEMS: ResearchItem[] = [
   {
-    title: '毕业设计：灵长类基因组未命名基因的结构与功能预测',
-  },
-  {
-    period: '2024.05 — 2025.05',
-    type: '强基科创 · 负责人',
-    title: '基于人工智能的蛋白翻译组学计算流程搭建及肺癌中的应用',
-    organization: '上海交通大学',
-    description:
-      '搭建并整合蛋白组学、翻译组学分析管线，用于发现肺癌相关肽段，项目已结项。',
-  },
-  {
     period: '2024.09 — 2025.03',
-    type: 'PRP #46',
+    type: '第46期本科生研究计划项目(PRP)',
     title: '基于人工智能的游戏设计',
     organization: '上海交通大学',
     description:
-      '借助 AI 工具完成游戏布局、画面与背景音乐设计，并使用大语言模型辅助开发轻量化 HTML 网页游戏。',
+      '借助 AI 工具完成游戏布局、画面设计，利用大语言模型及智能体开发轻量 HTML 网页游戏。',
   },
   {
-    period: '2023.09 — 2024.09',
-    type: 'PRP #44',
-    title: '基于人工智能和组学数据库的植物逆境机制研究',
+    period: '2024.05 — 2025.05',
+    type: '第一期强基计划科创项目',
+    title: '基于人工智能的蛋白翻译组学计算流程搭建及肺癌中的应用',
     organization: '上海交通大学',
     description:
-      '完成组学数据筛选、质控与肽段预测，分析拟南芥在逆境环境中的基因表达。',
+      '搭建并整合蛋白组学、翻译组学分析管线，用于发现肺癌相关肽段。',
+  },
+  {
+    period: '2025.09 — 2026.06',
+    title: '毕业设计：灵长类基因组未命名基因的结构与功能预测',
   },
 ];
 
@@ -45,22 +38,34 @@ const AWARD_GROUPS = [
   {
     index: '01',
     title: '程序设计',
-    items: ['上海市大学生程序设计竞赛金奖', 'ICPC 亚洲区域赛沈阳站、杭州站银牌'],
+    items: [
+      '2022年上海市大学生程序设计竞赛金奖',
+      '第47届国际大学生程序设计竞赛（ICPC）亚洲区域赛沈阳站银牌',
+      '第47届国际大学生程序设计竞赛（ICPC）亚洲区域赛杭州站银牌',
+    ],
   },
   {
     index: '02',
     title: '数学建模',
-    items: ['2023 美国大学生数学建模竞赛 M 奖'],
+    items: ['2023年美国大学生数学建模竞赛 M 奖'],
   },
   {
     index: '03',
     title: '围棋竞技',
-    items: ['上海市学生阳光体育大联赛男子个人亚军（2023、2024）', '业余 6 段'],
+    items: [
+      '“乐弈杯”上海市围棋锦标赛 5 段组亚军（2023）',
+      '上海市学生阳光体育大联赛围棋男子个人亚军（2023、2024）',
+    ],
   },
   {
     index: '04',
-    title: '奖学金',
-    items: ['校级 B 等优秀奖学金（2023、2024）', '金赛博爱奖学金 · 鼎晶生物强基计划奖学金'],
+    title: '荣誉与奖学金',
+    items: [
+      '上海交通大学生命科学技术学院三好学生（2023）',
+      '上海交通大学校级 B 等优秀奖学金（2023、2024）',
+      '中国红十字会“金赛博爱奖学金”（2023）',
+      '鼎晶生物强基计划奖学金（2024）',
+    ],
   },
 ];
 
@@ -124,7 +129,7 @@ function App() {
           <ul className="nav-list">
             <li><a href="#about">关于</a></li>
             <li><a href="#research">研究</a></li>
-            <li><a href="#awards">荣誉</a></li>
+            <li><a href="#awards">奖项</a></li>
             <li><a href="#life">生活</a></li>
           </ul>
         </nav>
@@ -140,12 +145,8 @@ function App() {
           <div className="hero-copy" data-reveal>
             <p className="eyebrow"><span aria-hidden="true" /> 上海 · 计算生物学</p>
             <h1 id="hero-title">
-              用计算，<br />
-              <em>理解生命。</em>
+              我是曾子瑞，2004年出生于江西南昌，2026年本科毕业于上海交通大学生物科学（强基计划）专业，现于上海交通大学计算机学院 &amp; 上海创智学院攻读博士学位，研究方向是 AI4Science。
             </h1>
-            <p className="hero-intro">
-              曾子瑞，上海交通大学生物科学本科生，专注生物信息学与 AI for Science。
-            </p>
 
             <div className="hero-actions">
               <a className="button button-primary" href="#research">
@@ -169,14 +170,9 @@ function App() {
               />
               <figcaption>
                 <span><MapPin aria-hidden="true" size={14} /> Shanghai, China</span>
-                <strong>SJTU · BIO</strong>
+                <strong>SJTU · CS</strong>
               </figcaption>
             </figure>
-            <div className="portrait-note" aria-hidden="true">
-              <span>RESEARCH</span>
-              <span>CODE</span>
-              <span>GO</span>
-            </div>
           </div>
 
           <a className="scroll-cue" href="#about" aria-label="继续阅读关于我">
@@ -185,33 +181,40 @@ function App() {
           </a>
         </section>
 
-        <section className="content-section section-container" id="about" aria-labelledby="about-title">
-          <div className="section-heading" data-reveal>
+        <section className="content-section section-container" id="about" aria-labelledby="profile-title">
+          <div className="section-heading section-heading-compact" data-reveal>
             <p className="section-kicker">01 / PROFILE</p>
-            <h2 id="about-title">把问题拆清楚，<br />再一步步验证。</h2>
           </div>
 
           <div className="profile-grid">
             <article className="profile-card glass-card" data-reveal>
-              <p className="profile-lead">
-                我在上海交通大学学习生物科学，选择大数据与智能医疗方向。当前聚焦蛋白质功能预测与生物信息学，习惯把生物问题转化为可复现的计算流程。
-              </p>
-              <div className="skill-list" aria-label="技能方向">
-                <span>Python</span>
-                <span>C++</span>
+              <h2 className="profile-title" id="profile-title">研究兴趣</h2>
+              <div className="skill-list" aria-label="研究兴趣">
                 <span>Bioinformatics</span>
-                <span>Protein Language Models</span>
+                <span>AI4Science</span>
+                <span>LLM &amp; 智能体</span>
               </div>
             </article>
 
             <aside className="education-card" data-reveal aria-label="教育背景">
               <p className="card-label">EDUCATION</p>
-              <p className="education-period">2022 — 至今</p>
-              <h3>上海交通大学</h3>
-              <p>生命科学技术学院</p>
-              <div className="education-detail">
-                <span>生物科学 · 强基计划</span>
-                <span>大数据与智能医疗方向</span>
+              <div className="education-list">
+                <div className="education-entry">
+                  <div className="education-meta">
+                    <time>2022 — 2026</time>
+                    <span>本科</span>
+                  </div>
+                  <h3>上海交通大学</h3>
+                  <p>生命科学技术学院</p>
+                </div>
+                <div className="education-entry">
+                  <div className="education-meta">
+                    <time>2026 — 至今</time>
+                    <span>博士</span>
+                  </div>
+                  <h3>上海交通大学</h3>
+                  <p>计算机学院</p>
+                </div>
               </div>
             </aside>
           </div>
@@ -219,12 +222,11 @@ function App() {
 
         <section className="content-section research-section" id="research" aria-labelledby="research-title">
           <div className="section-container">
-            <div className="section-heading section-heading-row" data-reveal>
+            <div className="section-heading" data-reveal>
               <div>
                 <p className="section-kicker">02 / RESEARCH</p>
                 <h2 id="research-title">研究经历</h2>
               </div>
-              <p className="section-summary">从数据质量控制到模型推理，关注能被复现、解释与应用的结果。</p>
             </div>
 
             <ol className="research-list">
@@ -263,7 +265,7 @@ function App() {
           <div className="section-heading section-heading-row" data-reveal>
             <div>
               <p className="section-kicker">03 / HIGHLIGHTS</p>
-              <h2 id="awards-title">精选荣誉</h2>
+              <h2 id="awards-title">所获奖项</h2>
             </div>
             <p className="section-summary">程序设计、建模与围棋，让不同类型的训练彼此补充。</p>
           </div>
@@ -315,7 +317,7 @@ function App() {
           <div className="contact-card" data-reveal>
             <div>
               <p className="section-kicker section-kicker-light">05 / CONTACT</p>
-              <h2 id="contact-title">欢迎交流科研、<br />代码与围棋。</h2>
+              <h2 id="contact-title">欢迎交流。</h2>
             </div>
             <div className="contact-links">
               <a href="mailto:sjtu19979148823@sjtu.edu.cn">
