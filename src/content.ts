@@ -73,7 +73,7 @@ export const SITE_CONTENT: Record<Locale, SiteContent> = {
       { href: '#life', label: '生活' },
     ],
     contactNav: '联系我',
-    languageLabel: 'EN',
+    languageLabel: 'English',
     languageAriaLabel: 'View this page in English',
     eyebrow: '上海 · 计算生物学',
     hero:
