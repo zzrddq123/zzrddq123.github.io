@@ -870,7 +870,12 @@
 .site-shell--en .award-header h3,
 .site-shell--en .hobby-copy h3,
 .site-shell--en .contact-card h2 {
-  font-family: 'Noto Serif Display', Georgia, serif;
+  font-family: 'Times New Roman', Times, 'Liberation Serif', serif;
+}
+
+.site-shell--en .section-heading h2,
+.site-shell--en .contact-card h2 {
+  letter-spacing: -0.02em;
 }
 
 .site-shell--en .hero h1 {
