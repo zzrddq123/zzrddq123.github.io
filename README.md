@@ -2,10 +2,12 @@
 
 一个聚焦生物信息学、蛋白质功能预测与个人经历的响应式主页。
 
-主页地址：
+## 访问主页 / Visit the website
 
-- 中文版：https://zzrddq123.github.io/
-- English: https://zzrddq123.github.io/en/
+| 中文版 | English |
+| :---: | :---: |
+| [进入中文主页 →](https://zzrddq123.github.io/) | [Visit the English homepage →](https://zzrddq123.github.io/en/) |
+| `https://zzrddq123.github.io/` | `https://zzrddq123.github.io/en/` |
 
 ## 本地运行
 
