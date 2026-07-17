@@ -186,7 +186,7 @@ export const SITE_CONTENT: Record<Locale, SiteContent> = {
     languageAriaLabel: '查看中文版本',
     eyebrow: 'SHANGHAI · COMPUTATIONAL BIOLOGY',
     hero:
-      'I’m Zirui Zeng, born in Nanchang, Jiangxi, in 2004. I earned my B.S. in Biological Sciences through the Strong Foundation Program at Shanghai Jiao Tong University in 2026. I am now pursuing doctoral studies with the School of Computer Science at Shanghai Jiao Tong University and Shanghai Innovation Institute, focusing on AI for Science.',
+      'I’m Zirui Zeng, born in Nanchang, Jiangxi, in 2004. I earned my B.S. in Biological Sciences through the Strengthening Foundation Plan at Shanghai Jiao Tong University in 2026. I am now pursuing doctoral studies with the School of Computer Science at Shanghai Jiao Tong University and Shanghai Innovation Institute, focusing on AI for Science.',
     viewResearch: 'Explore my research',
     contactButton: 'Get in touch',
     portraitAlt: 'Portrait of Zirui Zeng',
@@ -220,7 +220,7 @@ export const SITE_CONTENT: Record<Locale, SiteContent> = {
       },
       {
         period: '2024.05 — 2025.05',
-        type: 'Inaugural Strong Foundation Program Research and Innovation Project',
+        type: 'Inaugural Strengthening Foundation Plan Research and Innovation Project',
         title: 'AI-Based Proteomics and Translatomics Pipeline Development for Lung Cancer Research',
         organization: 'Shanghai Jiao Tong University',
         description:
@@ -264,7 +264,7 @@ export const SITE_CONTENT: Record<Locale, SiteContent> = {
           'Merit Student, School of Life Sciences and Biotechnology, Shanghai Jiao Tong University (2023)',
           'Shanghai Jiao Tong University Class B Excellence Scholarship (2023, 2024)',
           '“Jinsai Bo’ai” Scholarship, Chinese Red Cross Foundation (2023)',
-          'Topgen Strong Foundation Program Award (2024)',
+          'Topgen Strengthening Foundation Plan Award (2024)',
         ],
       },
     ],
