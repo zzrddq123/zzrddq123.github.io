@@ -9,12 +9,6 @@ type ResearchItem = {
   current?: boolean;
 };
 
-type AwardGroup = {
-  index: string;
-  title: string;
-  items: string[];
-};
-
 type Hobby = {
   image: string;
   title: string;
@@ -50,8 +44,6 @@ type SiteContent = {
   researchTitle: string;
   researchItems: ResearchItem[];
   currentLabel: string;
-  awardsTitle: string;
-  awardGroups: AwardGroup[];
   lifeTitle: string;
   hobbies: Hobby[];
   contactTitle: string;
@@ -69,7 +61,6 @@ export const SITE_CONTENT: Record<Locale, SiteContent> = {
     navItems: [
       { href: '#about', label: '关于' },
       { href: '#research', label: '研究' },
-      { href: '#awards', label: '奖项' },
       { href: '#life', label: '生活' },
     ],
     contactNav: '联系我',
@@ -124,41 +115,6 @@ export const SITE_CONTENT: Record<Locale, SiteContent> = {
       },
     ],
     currentLabel: '进行中',
-    awardsTitle: '所获奖项',
-    awardGroups: [
-      {
-        index: '01',
-        title: '程序设计',
-        items: [
-          '2022年上海市大学生程序设计竞赛金奖',
-          '第47届国际大学生程序设计竞赛（ICPC）亚洲区域赛沈阳站银牌',
-          '第47届国际大学生程序设计竞赛（ICPC）亚洲区域赛杭州站银牌',
-        ],
-      },
-      {
-        index: '02',
-        title: '数学建模',
-        items: ['2023年美国大学生数学建模竞赛 M 奖'],
-      },
-      {
-        index: '03',
-        title: '围棋竞技',
-        items: [
-          '“乐弈杯”上海市围棋锦标赛 5 段组亚军（2023）',
-          '上海市学生阳光体育大联赛围棋男子个人亚军（2023、2024）',
-        ],
-      },
-      {
-        index: '04',
-        title: '荣誉与奖学金',
-        items: [
-          '上海交通大学生命科学技术学院三好学生（2023）',
-          '上海交通大学校级 B 等优秀奖学金（2023、2024）',
-          '中国红十字基金会“金赛博爱奖学金”（2023）',
-          '鼎晶生物强基计划奖励基金（2024）',
-        ],
-      },
-    ],
     lifeTitle: '科研之外',
     hobbies: [
       { image: 'hobby-go.jpg', title: '围棋' },
@@ -178,7 +134,6 @@ export const SITE_CONTENT: Record<Locale, SiteContent> = {
     navItems: [
       { href: '#about', label: 'About' },
       { href: '#research', label: 'Research' },
-      { href: '#awards', label: 'Awards' },
       { href: '#life', label: 'Life' },
     ],
     contactNav: 'Contact',
@@ -233,41 +188,6 @@ export const SITE_CONTENT: Record<Locale, SiteContent> = {
       },
     ],
     currentLabel: 'Ongoing',
-    awardsTitle: 'Awards & Honors',
-    awardGroups: [
-      {
-        index: '01',
-        title: 'Competitive Programming',
-        items: [
-          'Gold Medal, 2022 Shanghai Collegiate Programming Contest',
-          'Silver Medal, 47th ICPC Asia Shenyang Regional Contest',
-          'Silver Medal, 47th ICPC Asia Hangzhou Regional Contest',
-        ],
-      },
-      {
-        index: '02',
-        title: 'Mathematical Modeling',
-        items: ['Meritorious Winner, 2023 Mathematical Contest in Modeling (MCM)'],
-      },
-      {
-        index: '03',
-        title: 'Competitive Go',
-        items: [
-          'Runner-up, 5-Dan Division, “Leyi Cup” Shanghai Go Championship (2023)',
-          'Men’s Individual Runner-up, Shanghai Student Sunshine Sports League Go Competition (2023, 2024)',
-        ],
-      },
-      {
-        index: '04',
-        title: 'Honors & Scholarships',
-        items: [
-          'Merit Student, School of Life Sciences and Biotechnology, Shanghai Jiao Tong University (2023)',
-          'Shanghai Jiao Tong University Class B Excellence Scholarship (2023, 2024)',
-          '“Jinsai Bo’ai” Scholarship, Chinese Red Cross Foundation (2023)',
-          'Topgen Strengthening Foundation Plan Award (2024)',
-        ],
-      },
-    ],
     lifeTitle: 'Beyond Research',
     hobbies: [
       { image: 'hobby-go.jpg', title: 'Go' },

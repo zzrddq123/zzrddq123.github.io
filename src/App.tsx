@@ -188,33 +188,10 @@ function App() {
           </div>
         </section>
 
-        <section className="content-section section-container" id="awards" aria-labelledby="awards-title">
-          <div className="section-heading" data-reveal>
-            <div>
-              <p className="section-kicker">03 / HIGHLIGHTS</p>
-              <h2 id="awards-title">{copy.awardsTitle}</h2>
-            </div>
-          </div>
-
-          <div className="awards-grid">
-            {copy.awardGroups.map((group) => (
-              <article className="award-card" data-reveal key={group.title}>
-                <div className="award-header">
-                  <span>{group.index}</span>
-                  <h3>{group.title}</h3>
-                </div>
-                <ul>
-                  {group.items.map((item) => <li key={item}>{item}</li>)}
-                </ul>
-              </article>
-            ))}
-          </div>
-        </section>
-
         <section className="content-section life-section" id="life" aria-labelledby="life-title">
           <div className="section-container">
             <div className="section-heading" data-reveal>
-              <p className="section-kicker">04 / OFF THE CLOCK</p>
+              <p className="section-kicker">03 / OFF THE CLOCK</p>
               <h2 id="life-title">{copy.lifeTitle}</h2>
             </div>
 
@@ -242,7 +219,7 @@ function App() {
         <section className="contact-wrap section-container" id="contact" aria-labelledby="contact-title">
           <div className="contact-card" data-reveal>
             <div>
-              <p className="section-kicker section-kicker-light">05 / CONTACT</p>
+              <p className="section-kicker section-kicker-light">04 / CONTACT</p>
               <h2 id="contact-title">{copy.contactTitle}</h2>
             </div>
             <div className="contact-links">
